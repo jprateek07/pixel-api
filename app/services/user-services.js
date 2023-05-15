@@ -60,7 +60,15 @@ exports.signin = (req, res) => {
     });
 };
 
+exports.addUser = async(username,email,pwd) => {
 
+  let result = await User.create({
+    username: username,
+    email: email,
+    password: bcrypt.hashSync(pwd, 8)
+  })
+  return result
+};
 function validateRequest(req){
   if (!req.body) {
     res.status(400).send({
