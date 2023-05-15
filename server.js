@@ -65,4 +65,4 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log("Running on port ", PORT);
 });
-client.login('MTEwNjQ0NDc3MjY1MjEwNTg3OA.Gj6BoF.YHbQ5R4Pf9P7h2LYoii5WD_tYIOHriAPsquxgo');
+client.login(process.env.token);
